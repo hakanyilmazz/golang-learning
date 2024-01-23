@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/cmplx"
 	"math/rand"
 	"time"
 )
@@ -34,9 +35,11 @@ func main() {
 	fmt.Println(i, c, python, java)
 
 	initVariables()
-	
+
 	fmt.Println(varKeywordRequired)
 	varKeywordNotRequired()
+
+	basicTypesOfGoLang()
 }
 
 func multiply(x int, y int) int {
@@ -74,4 +77,49 @@ func varKeywordNotRequired() {
 	a := 10
 	c, python, java := true, false, "java"
 	fmt.Println(a, c, python, java)
+}
+
+func basicTypesOfGoLang() {
+	// var golang bool
+
+	// var name string
+
+	// var number1 int
+	// var number2 int8
+	// var number3 int16
+	// var number4 int32
+	// var number5 int64
+
+	// var number6 uint
+	// var number7 uint8
+	// var number8 uint16
+	// var number9 uint32
+	// var number10 uint64
+	// var number11 uintptr
+
+	// var byteValue byte // alias for int8
+
+	// var runeValue rune // alias for int32
+
+	// var floatValue1 float32
+	// var floatValue2 float64
+
+	// var complexValue1 complex64
+	// var complexValue2 complex128
+
+	// The int, uint, and uintptr types
+	// are usually 32 bits wide on 32-bit systems
+	// and 64 bits wide on 64-bit systems
+
+	var (
+		isGoLang      bool       = true
+		maxIntValue   uint64     = 1<<64 - 1
+		floatValue    float64    = 1.23
+		complexNumber complex128 = cmplx.Sqrt(-5 + 12i)
+	)
+
+	fmt.Printf("Type: %T Value: %v\n", isGoLang, isGoLang)
+	fmt.Printf("Type: %T Value: %v\n", maxIntValue, maxIntValue)
+	fmt.Printf("Type: %T Value: %v\n", complexNumber, complexNumber)
+	fmt.Printf("Type: %T Value: %v\n", floatValue, floatValue)
 }
