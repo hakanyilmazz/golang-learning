@@ -40,6 +40,10 @@ func main() {
 	varKeywordNotRequired()
 
 	basicTypesOfGoLang()
+
+	defaultValuesOfTypes()
+
+	stringFormats()
 }
 
 func multiply(x int, y int) int {
@@ -122,4 +126,25 @@ func basicTypesOfGoLang() {
 	fmt.Printf("Type: %T Value: %v\n", maxIntValue, maxIntValue)
 	fmt.Printf("Type: %T Value: %v\n", complexNumber, complexNumber)
 	fmt.Printf("Type: %T Value: %v\n", floatValue, floatValue)
+}
+
+func defaultValuesOfTypes() {
+	// 0 numeric
+	// false boolean
+	// "" string
+
+	var i int
+	var f float64
+	var b bool
+	var s string
+
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+
+func stringFormats() {
+	// %T types
+	// %q strings with ""
+	// %v values every types
+	// %g value of floats
+	// %d value of ints
 }
